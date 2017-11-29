@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The best Taxi service in Hanoi">
+    <meta name="author" content="ngay tho">
+    <title>Phếch Taxi</title>
+    <link rel="shortcut icon" href="image/icon-taxi'.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Righteous|Roboto+Mono|Space+Mono|Work+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--   Navigation Bar-->
+    <nav class="navbar navbar-fixed-top" id="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#headNav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                   </button>
+                <span class="taxi-brand" href="#">PhechTaxi</span>
+            </div>
+            <div class="collapse navbar-collapse" id="headNav">
+                <ul class="nav navbar-nav page-ct">
+                    <li><a href="#about-us" class="active">About</a> </li>
+                    <li><a href="#service">Service</a> </li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#customer">Customer</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#booking" class="btn-nav">BOOK NOW</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--    Slideshow-->
+    <div class="container-fluid">
+        <div class="wrap">
+            <div id="arrow-left" class="arrow"></div>
+            <div id="slider">
+                <div class="slide slide1">
+                    <div class="slide-ct">
+                        <span>It is Phech, not Fake</span>
+                    </div>
+                </div>
+                <div class="slide slide2">
+                    <div class="slide-ct">
+                        <span>The best taxi drivers from Japanese</span>
+                    </div>
+                </div>
+                <div class="slide slide3">
+                    <div class="slide-ct">
+                        <span>Best customer service for girls and lads</span>
+                    </div>
+                </div>
+            </div>
+            <div id="arrow-right" class="arrow"></div>
+        </div>
+    </div>
+    <!--    About Us-->
+    <div class="container-fluid" id="about-us">
+        <h1 class="text-center">WHO ARE WE?</h1>
+        <div class="row">
+            <div class="col-xs-6 col-md-7">
+                <img src="image/carr.jpg" alt="cab" class="img-responsive">
+            </div>
+            <div class="col-xs-6 col-md-5" id="about-info">
+
+                <p>We are a professional taxi company located in Hanoi, Vietnam. </p>
+                <p>We have been the number one company in Southeast Asia for over 10 years. </p>
+                <p>Our sole purpose is giving every customer amazing experience with <a href="#service">our taxi services.</a> <br/>Everything with us is top notch, from the cars to our drivers.</p>
+            </div>
+
+        </div>
+    </div>
+    <!--    Service-->
+    <div class="container" id="service">
+        <h1 class="text-center">WHAT WE OFFER</h1>
+        <div class="row row-eq-height">
+            <div class="col-xs-6 col-md-3 text-center service-ct">
+                <img src="image/taxi.png" alt="cab">
+                <h2>Luxury Car</h2>
+                <p>Highest quality and best cars <br>in town</p>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center service-ct">
+                <img src="image/rocket.png" alt="speed">
+                <h2>Fastest</h2>
+                <p>Wherever you want to go. <br>Always on time. </p>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center service-ct">
+                <img src="image/savings.png" alt="price">
+                <h2>Best Pricing</h2>
+                <p>Competitive Prices.<br/> Check our <a href="#"> pricing plan</a></p>
+            </div>
+            <div class="col-xs-6 col-md-3 text-center service-ct">
+                <img src="image/heart.png" alt="love">
+                <h2>Nicest Service</h2>
+                <p>Best customer support. <br/> See what people <a href="#">tell about us.</a></p>
+            </div>
+        </div>
+
+    </div>
+    <!--    Customer Reviews-->
+    <div class="container-fluid" id="customer">
+        <h1 class="text-center">GALLERY</h1>
+        <div class="row nospace">
+            <div class="col-xs-12 col-md-7">
+                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#firstModal">
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#secondModal">
+            </div>
+        </div>
+        <div class="row nospace">
+            <div class="col-xs-12 col-md-3">
+                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#thirdModal">
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <img src="customer/musk.jpeg" class="img-responsive img-review" data-toggle="modal" data-target="#fourthModal">
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#fifthModal">
+            </div>
+        </div>
+        <!--        Modal -->
+        <!--        First Modal-->
+        <div class="modal fade" id="firstModal" tabindex="-1" role="dialog" aria-labelledby="firstModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Nguyen Tu Quang</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <img src="customer/quang.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <p>Unbelieveable !!!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Second Modal-->
+        <div class="modal fade" id="secondModal" tabindex="-1" role="dialog" aria-labelledby="secondModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Usain Bolt</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <img src="customer/quang.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <p>Không thể tin nổi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Third Modal-->
+        <div class="modal fade" id="thirdModal" tabindex="-1" role="dialog" aria-labelledby="thirdModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Bomb</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <img src="customer/quang.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <p>Thật không thể tin nổi !!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Fourth Modal-->
+        <div class="modal fade" id="fourthModal" tabindex="-1" role="dialog" aria-labelledby="fourthModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Elon Musk</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <img src="customer/quang.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <p>Tin Tin Cái CC</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--        Fifth Modal-->
+        <div class="modal fade" id="fifthModal" tabindex="-1" role="dialog" aria-labelledby="fifthModal" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">Con Ku</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <img src="customer/quang.jpg" class="img-responsive">
+                            </div>
+                            <div class="col-xs-12 col-md-6">
+                                <p>The Best taxi service ever!!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Company Team-->
+    <div class="container" id="team">
+        <h1 class="text-center">SEE OUR AMAZING TEAM</h1>
+        <div class="row">
+            <div class="info-card">
+                <div class="front">
+                    <img class="card-image" src="customer/musk.jpeg">
+                </div>
+                <div class="back">
+                    <h2>Son Goku</h2>
+                    <p>
+                        HIHIHIHHI
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="front">
+                    <img class="card-image" src="customer/musk.jpeg">
+                </div>
+                <div class="back">
+                    <h2>Vegeta</h2>
+                    <p>
+                        HIHIHIHHIH
+                    </p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="front">
+                    <img class="card-image" src="customer/musk.jpeg">
+                </div>
+                <div class="back">
+                    <h2>Piccolo</h2>
+                    <p>
+                        CHIU CHIU CHIU CHIU CHIU CHIU
+                    </p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="front">
+                    <img class="card-image" src="customer/musk.jpeg">
+                </div>
+                <div class="back">
+                    <h2>Frieza</h2>
+                    <p>
+                        PANG PANG PANG PANG PANG
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Pricing-->
+    <div class="container" id="pricing">
+        <h1 class="text-center">PRICING PLAN</h1>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="pricing hover-effect">
+                    <div class="pricing-head">
+                        <h3>Pro <span>
+					Officia deserunt mollitia </span>
+                        </h3>
+                        <h4><i>$</i>8<i>.69</i>
+                        </h4>
+                            <span>
+					Per Month </span>
+                    </div>
+                    <ul class="pricing-content list-unstyled">
+                        <li> At vero eos </li>
+                        <li>No </li>
+                        <li>Hihi</li>
+                        <li>Hihi</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                        </p>
+                        <a href="#" class="btn yellow-crusta">
+					Book Now
+					</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="pricing pricing-active hover-effect">
+                    <div class="pricing-head pricing-head-active">
+                        <h3>Expert <span>
+					Officia deserunt mollitia </span>
+                        </h3>
+                        <h4><i>$</i>13<i>.99</i>
+                            <span>
+					Per Month </span>
+                        </h4>
+                    </div>
+                    <ul class="pricing-content list-unstyled">
+                        <li>hihi</li>
+                        <li>Hehe</li>
+                        <li>kaka</li>
+                        <li>hoho</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                        </p>
+                        <a href="#" class="btn yellow-crusta">
+					Book Now
+					</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <div class="pricing hover-effect">
+                    <div class="pricing-head">
+                        <h3>Hi-Tech <span>
+					Officia deserunt mollitia </span>
+                        </h3>
+                        <h4><i>$</i>99<i>.00</i>
+                            <span>
+					Per Month </span>
+                        </h4>
+                    </div>
+                    <ul class="pricing-content list-unstyled">
+                        <li>hehe</li>
+                        <li>kuku</li>
+                        <li>koko</li>
+                        <li>iku</li>
+                    </ul>
+                    <div class="pricing-footer">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                        </p>
+                        <a href="#" class="btn yellow-crusta">
+					Book Now
+					</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--    Booking-->
+    <div class="container-fluid" id="booking">
+        <div class="row row-eq-height">
+            <div class="col-xs-12 col-md-6" id="booking-form">
+
+                <h2 class="text-center">Booking Form</h2>
+                <form action="taxiReserDBphp.php">
+
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>Your Name: </p>
+                        </div>
+                        <div class="col-xs-9">
+                            <input type="text" name="username" value="Your name">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>Your Phone:</p>
+                        </div>
+                        <div class="col-xs-9"><input type="tel" name="phone number" value="Your Phone Number"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>When:</p>
+                        </div>
+                        <div class="col-xs-9"><input type="date" name="date"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>Hour:</p>
+                        </div>
+                        <div class="col-xs-9"><input type="time" name="time"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>Start Destination:</p>
+                        </div>
+                        <div class="col-xs-9"> <input type="text" name="start destination"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>End Destination:</p>
+                        </div>
+                        <div class="col-xs-9"> <input type="text" name="end destination"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-3 label">
+                            <p>Pricing plan:</p>
+                        </div>
+                        <div class="col-xs-9">
+                            <div class="checkbox">
+                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-pricing text-uppercase">Book Now</button>
+                </form>
+
+
+
+            </div>
+            <div class="col-xs-12 col-md-6" id="img-pricing">
+                <img src="customer/girl.png" class="img-responsive" alt="gái">
+            </div>
+        </div>
+    </div>
+    <!--     Footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-4">
+                    <p class="copyright">Copyright &copy; PhechTaxi</p>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                   <p class="text-center">Connected With Us</p>
+                    <ul class="list-inline social">
+                        <li class="list-inline-item">
+                            <a href="#"><img src="social/insta.png" alt="instagram"> </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="social/fb.png" alt="facebook"> </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><img src="social/youtube.png" alt="youtube"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Javascript -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+/*Edit Font*/
+
+/*
+
+font-family: 'Fredoka One', cursive;
+font-family: 'Righteous', cursive;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Space Mono', monospace;
+font-family: 'Concert One', cursive;
+font-family: 'Work Sans', sans-serif;
+*/
+
+/*Color Palette*/
+
+body {
+    padding-top: 50px;
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+}
+
+.row-eq-height {
+    display: flex;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 50px;
+}
+
+p {
+    line-height: 1.75;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/*Naavigation Bar*/
+
+nav {
+    background: url(image/background.jpg);
+    padding: 10px;
+    position: absolute;
+}
+
+nav a,
+nav a:hover {
+    text-decoration: none;
+
+}
+
+.icon-bar {
+    background:  #FEB729;
+}
+
+#headNav a.active,
+#headNav a:active,
+#headNav a:focus,
+#headNav a:hover {
+    color: #fed136;
+}
+
+/*Remove Boostrap hover effect */
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.taxi-brand {
+    font-family: 'Concert One', cursive;
+    color: #fed136;
+    font-size: 45px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-left: 15px;
+}
+
+nav .navbar-nav {
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+
+#headNav .btn-nav {
+    font-family: 'Fredoka One', cursive;
+    color: #fed116;
+    font-size: 24px;
+    background-color: #fff;
+    margin-top: 5px;
+
+}
+
+#headNav .btn-nav:hover,
+#headNav .btn-nav:focus,
+#headNav .btn-nav:active {
+    color: #fff;
+    background: #fed116;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+.page-ct {
+    margin-left: 12%;
+    line-height: 2.5px;
+    padding-left: 5px;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.page-ct a:not(.active) {
+    color: #fff;
+}
+
+/*Slide section*/
+
+#slider,
+.wrap,
+.slide-ct {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.wrap {
+    position: relative;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url("car/driver%201.jpg");
+}
+
+.slide2 {
+    background-image: url("car/car%203.jpg");
+}
+
+.slide3 {
+    background-image: url("car/driver%202.jpg");
+}
+
+.slide-ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-ct span {
+    font-size: 5rem;
+    color: #fff;
+
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left {
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 30px;
+}
+
+#arrow-right {
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 30px;
+}
+
+/*About Us*/
+
+#about-us {
+    margin-top: 20px;
+}
+
+#about-us h1 {
+    margin-bottom: 40px;
+}
+
+#about-us #about-info {
+    padding: 5px;
+}
+
+#about-info p {
+    margin-top: 10px;
+}
+
+/*Service*/
+
+#service {
+    margin-top: 20px;
+
+}
+
+.service-ct {
+    background: #F5F5F5;
+
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+
+
+#service img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+#service p {
+    font-size: 16px;
+    color: grey;
+    font-weight: 600;
+
+}
+
+/*Customer Review*/
+
+.nospace > div[class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.img-review {
+    height: 400px;
+    width: 100%;
+    margin: 0;
+}
+
+/*Team*/
+
+.info-card {
+    float: left;
+    margin: 10px;
+    perspective: 600px;
+}
+
+.front,
+.back {
+    background: #FFF;
+
+    transition: transform 1s;
+    backface-visibility: hidden;
+    border: 1px solid black;
+}
+
+.front {
+    overflow: hidden;
+    width: 250px;
+    height: 330px;
+    position: absolute;
+    z-index: 1;
+}
+
+.back {
+    padding: 20px;
+    padding-top: 0px;
+    width: 250px;
+    height: 330px;
+    transform: rotateY(-180deg);
+
+}
+
+.info-card:hover .back {
+    transform: rotateY(0);
+}
+
+.info-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+}
+
+/*Pricing*/
+
+.pricing {
+    position: relative;
+    margin-top: 25px;
+    border: 3px solid #eee;
+}
+
+.pricing-active {
+    border: 3px solid #FFF176;
+    margin-top: 10px;
+    box-shadow: 7px 7px rgba(54, 215, 172, 0.2);
+}
+
+.pricing:hover {
+    border: 3px solid #FFF176;
+}
+
+/*#FFEB3B*/
+
+.pricing-head {
+    text-align: center;
+}
+
+.pricing-head h3,
+.pricing-head h4 {
+    margin: 0;
+    line-height: normal;
+}
+
+.pricing-head h3 span,
+.pricing-head h4 span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+
+.pricing-head h3 {
+    font-weight: 300;
+    color: #fafafa;
+    padding: 12px 0;
+    font-size: 27px;
+    background: #FFF176;
+    border-bottom: solid 1px #41b91c;
+}
+
+.pricing-head h4 {
+    color: #424242;
+    padding: 5px 0;
+    font-size: 54px;
+    font-weight: 300;
+    background: #fbfef2;
+    border-bottom: solid 1px #f5f9e7;
+}
+
+.pricing-head-active h4 {
+    color: #36d7ac;
+}
+
+.pricing-head h4 i {
+    top: -8px;
+    font-size: 28px;
+    font-style: normal;
+    position: relative;
+}
+
+.pricing-head h4 span {
+    top: -10px;
+    font-size: 14px;
+    font-style: normal;
+    position: relative;
+}
+
+/*Pricing Content*/
+
+.pricing-content li {
+    color: #888;
+    font-size: 12px;
+    padding: 7px 15px;
+    border-bottom: solid 1px #f5f9e7;
+}
+
+
+.pricing-footer {
+    color: #777;
+    font-size: 11px;
+    line-height: 17px;
+    text-align: center;
+    padding: 0 20px 19px;
+}
+
+/*Priceing Active*/
+
+.price-active,
+.pricing:hover {
+    z-index: 9;
+}
+
+.price-active h4 {
+    color: #fed136;
+}
+
+.no-space-pricing .pricing:hover {
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.no-space-pricing .price-active .pricing-head h4,
+.no-space-pricing .pricing:hover .pricing-head h4 {
+    color: #36d7ac;
+    padding: 15px 0;
+    font-size: 80px;
+    transition: color 0.5s ease-in-out;
+}
+
+.yellow-crusta.btn {
+    color: #FFFFFF;
+    background-color: #e71c1c;
+}
+
+.yellow-crusta.btn:hover,
+.yellow-crusta.btn:focus,
+.yellow-crusta.btn:active,
+.yellow-crusta.btn.active {
+    color: #FFFFFF;
+    background-color: #cfa500;
+}
+
+/*Booking Section*/
+
+#booking {
+    margin-top: 20px;
+}
+
+#booking-form {
+    background: #000;
+
+
+}
+
+#booking-form h2 {
+    color: #fff;
+
+}
+
+#booking form {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+#booking-form .label p {
+    color: #fed136;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+#booking-form input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="time"] {
+    color: #dedede;
+    background-color: #1a1a1a;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+
+.checkbox {
+    position: relative;
+    right: -20px;
+    color: #fed136;
+    font-size: 16px;
+}
+
+.btn-pricing {
+    margin-top: 5px;
+    border-radius: 12px;
+    border: 1px solid #fed136;
+    background: #fed136;
+    color: #FFF;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+
+.btn-pricing.focus,
+.btn-pricing:focus {
+    color: white;
+    border-color: #b48b01;
+    background-color: #fec503;
+}
+
+.btn-pricing:hover {
+    color: white;
+    border-color: #f6bf01;
+    background-color: #fec503;
+}
+
+
+#img-pricing {
+    background: url('image/town.jpeg') no-repeat;
+    background-size: cover;
+}
+
+/*footer */
+
+footer {
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+footer ul.quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+ul.social {
+    margin-bottom: 0;
+}
+
+ul.social li a img {
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s;
+}
+
+ul.social li img:active,
+ul.social li img:focus,
+ul.social li img:hover {
+    border: 1px solid #fed136;
+    border-radius: 50%;
+}
