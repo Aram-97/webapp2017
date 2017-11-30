@@ -16,9 +16,12 @@ $start   = $_POST["startPlace"];
 $end     = $_POST["endPlace"];
 $vehicle = (int)$_POST["vehicleID"];
 
+echo "<br>Show All Driver<br>"
+showAllDriver($connect);
+
 // Make new Reservation
 echo "<br>Making new Reservation...<br>";
-showAllDriver($connect);
+newReservation($connect, $name, $tele, $time, $start, $end, $vehicle);
 
 ////////Function
 
@@ -213,25 +216,37 @@ function showCheckOutReservation($connect){
 
 //all driver
 function showAllDriver($connect){
-	$sql = "SELECT * 
+	$sql = "SELECT *
 			FROM driver";
 
 	$result = $connect->query($sql);
 
+	echo "<br>" .
+	"<table border='1'>
+		<tr>
+			<th>ID</th>
+			<th>Driver Name</th>
+			<th>Driver Tel.</th>
+			<th>Reservation ID</th>
+		</tr>";
+
 	if($result->num_rows > 0){
 		while ($row = $result->fetch_assoc()) {
 			//change how it is displayed here
-			echo "<br>" . "id: " . $row["ID"] 
-			. " - Driver Name: " . $row["name"] 
-			. " - Driver Phone: " . $row["phone"]
-			. " - Reservation: " . $row["reservationID"];
+			echo
+			"<tr>"
+				. "<td>" . $row["ID"] . "</td>"
+				. "<td>" . $row["name"] . "</td>"
+				. "<td>" . $row["phone"] . "</td>"
+				. "<td>" . $row["reservationID"] . "</td>"
+			. "</tr>";
 		}
 	}
 }
 
 //check taxi driver to put to work
 function checkFreeDriver($connect){
-	$sql = "SELECT * 
+	$sql = "SELECT *
 			FROM driver
 			WHERE reservationID IS NULL";
 
@@ -240,8 +255,8 @@ function checkFreeDriver($connect){
 	if($result->num_rows > 0){
 		while ($row = $result->fetch_assoc()) {
 			//change how it is displayed here
-			echo "<br>" . "id: " . $row["ID"] 
-			. " - Driver Name: " . $row["name"] 
+			echo "<br>" . "id: " . $row["ID"]
+			. " - Driver Name: " . $row["name"]
 			. " - Driver Phone: " . $row["phone"];
 		}
 	}
