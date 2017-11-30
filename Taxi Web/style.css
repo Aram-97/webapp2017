@@ -12,6 +12,13 @@ font-family: 'Work Sans', sans-serif;
 
 /*Color Palette*/
 
+/*
+#00275E - midnight blue
+#6D98AB - lightblue
+#FEB729 - yellow orange
+#A8B1B8 - hit gray
+*/
+
 body {
     padding-top: 50px;
     font-size: 20px;
@@ -31,6 +38,14 @@ h1 {
 p {
     line-height: 1.75;
     font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: #FEB729;
+    text-decoration: none;
 }
 
 /*Naavigation Bar*/
@@ -48,14 +63,14 @@ nav a:hover {
 }
 
 .icon-bar {
-    background:  #FEB729;
+    background: #FEB729;
 }
 
 #headNav a.active,
 #headNav a:active,
 #headNav a:focus,
 #headNav a:hover {
-    color: #fed136;
+    color: #FEB729;
 }
 
 /*Remove Boostrap hover effect */
@@ -68,7 +83,7 @@ nav a:hover {
 
 .taxi-brand {
     font-family: 'Concert One', cursive;
-    color: #fed136;
+    color: #FEB729;
     font-size: 45px;
     font-weight: 800;
     letter-spacing: 1.5px;
@@ -83,7 +98,7 @@ nav .navbar-nav {
 
 #headNav .btn-nav {
     font-family: 'Fredoka One', cursive;
-    color: #fed116;
+    color: #FEB729;
     font-size: 24px;
     background-color: #fff;
     margin-top: 5px;
@@ -94,12 +109,12 @@ nav .navbar-nav {
 #headNav .btn-nav:focus,
 #headNav .btn-nav:active {
     color: #fff;
-    background: #fed116;
+    background: #FEB729;
     border: 2px solid #fff;
     transition: 0.5s;
 }
 
-.page-ct {
+.nav-ct {
     margin-left: 12%;
     line-height: 2.5px;
     padding-left: 5px;
@@ -107,14 +122,13 @@ nav .navbar-nav {
     font-size: 22px;
 }
 
-.page-ct a:not(.active) {
+.nav-ct a:not(.active) {
     color: #fff;
 }
 
 /*Slide section*/
 
-#slider,
-.wrap,
+#slide-wrap,
 .slide-ct {
     margin: 0;
     padding: 0;
@@ -123,26 +137,31 @@ nav .navbar-nav {
     overflow: hidden;
 }
 
-.wrap {
+#slide-wrap {
     position: relative;
 }
 
-.slide {
+.item {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .slide1 {
-    background-image: url("car/driver%201.jpg");
+    background-image: url("car/taxi1.jpg");
+    background-attachment: fixed;
+    background-position: top left;
 }
 
 .slide2 {
-    background-image: url("car/car%203.jpg");
+    background-image: url("car/girlz.jpg");
+    background-attachment: fixed;
 }
 
 .slide3 {
-    background-image: url("car/driver%202.jpg");
+    background-image: url("car/taxi4.jpg");
+    background-attachment: fixed;
+    background-position: top left;
 }
 
 .slide-ct {
@@ -154,34 +173,23 @@ nav .navbar-nav {
 }
 
 .slide-ct span {
-    font-size: 5rem;
-    color: #fff;
-
+    font-size: 55px;
+    color: #FFF;
+    letter-spacing: 2px;
 }
 
-.arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    margin-top: -45px;
-    width: 0;
-    height: 0;
-    border-style: solid;
+.slide-ct span.orange-text {
+    color: #FEB729;
 }
 
-#arrow-left {
-    border-width: 30px 40px 30px 0;
-    border-color: transparent #fff transparent transparent;
-    left: 0;
-    margin-left: 30px;
+.left,
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#arrow-right {
-    border-width: 30px 0 30px 40px;
-    border-color: transparent transparent transparent #fff;
-    right: 0;
-    margin-right: 30px;
-}
+
 
 /*About Us*/
 
@@ -205,18 +213,13 @@ nav .navbar-nav {
 
 #service {
     margin-top: 20px;
-
 }
 
 .service-ct {
     background: #F5F5F5;
-
     padding: 10px;
     margin-top: 10px;
 }
-
-
-
 
 #service img {
     width: 100px;
@@ -228,7 +231,6 @@ nav .navbar-nav {
     font-size: 16px;
     color: grey;
     font-weight: 600;
-
 }
 
 /*Customer Review*/
@@ -244,10 +246,15 @@ nav .navbar-nav {
     margin: 0;
 }
 
+.modal-title {
+    color: #FEB729;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
 /*Team*/
 
 .info-card {
-    float: left;
     margin: 10px;
     perspective: 600px;
 }
@@ -255,16 +262,15 @@ nav .navbar-nav {
 .front,
 .back {
     background: #FFF;
-
     transition: transform 1s;
     backface-visibility: hidden;
-    border: 1px solid black;
+    border: 1px solid #A8B1B8;
 }
 
 .front {
     overflow: hidden;
-    width: 250px;
-    height: 330px;
+    width: 300px;
+    height: 320px;
     position: absolute;
     z-index: 1;
 }
@@ -272,10 +278,13 @@ nav .navbar-nav {
 .back {
     padding: 20px;
     padding-top: 0px;
-    width: 250px;
-    height: 330px;
+    width: 300px;
+    height: 320px;
     transform: rotateY(-180deg);
+}
 
+#team h2 {
+    color: #FEB729;
 }
 
 .info-card:hover .back {
@@ -296,20 +305,18 @@ nav .navbar-nav {
 .pricing {
     position: relative;
     margin-top: 25px;
-    border: 3px solid #eee;
+    border: 3px solid #FFE082;
 }
 
 .pricing-active {
-    border: 3px solid #FFF176;
+    border: 3px solid #FEB729;
     margin-top: 10px;
-    box-shadow: 7px 7px rgba(54, 215, 172, 0.2);
+    box-shadow: 7px 7px #FFF3E0;
 }
 
 .pricing:hover {
-    border: 3px solid #FFF176;
+    border: 3px solid #FEB729;
 }
-
-/*#FFEB3B*/
 
 .pricing-head {
     text-align: center;
@@ -321,34 +328,32 @@ nav .navbar-nav {
     line-height: normal;
 }
 
-.pricing-head h3 span,
 .pricing-head h4 span {
     display: block;
     margin-top: 5px;
     font-size: 14px;
-
 }
 
 .pricing-head h3 {
-    font-weight: 300;
-    color: #fafafa;
+    font-weight: 400;
+    color: #fff;
     padding: 12px 0;
-    font-size: 27px;
-    background: #FFF176;
-    border-bottom: solid 1px #41b91c;
+    font-size: 32px;
+    background: #FEB729;
+    border-bottom: solid 1px #FFE0B2;
 }
 
 .pricing-head h4 {
-    color: #424242;
+    color: #62a2ed;
     padding: 5px 0;
     font-size: 54px;
     font-weight: 300;
     background: #fbfef2;
-    border-bottom: solid 1px #f5f9e7;
+    border-bottom: solid 1px #A8B1B8;
 }
 
 .pricing-head-active h4 {
-    color: #36d7ac;
+    color: #01579B;
 }
 
 .pricing-head h4 i {
@@ -358,65 +363,53 @@ nav .navbar-nav {
     position: relative;
 }
 
-.pricing-head h4 span {
-    top: -10px;
-    font-size: 14px;
-    font-style: normal;
-    position: relative;
-}
-
-/*Pricing Content*/
-
 .pricing-content li {
-    color: #888;
-    font-size: 12px;
+    color: #424242;
+    font-size: 15px;
     padding: 7px 15px;
     border-bottom: solid 1px #f5f9e7;
 }
 
-
 .pricing-footer {
     color: #777;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 17px;
     text-align: center;
     padding: 0 20px 19px;
 }
 
-/*Priceing Active*/
-
-.price-active,
-.pricing:hover {
-    z-index: 9;
+.pricing-footer p {
+    font-size: 16px;
 }
 
 .price-active h4 {
     color: #fed136;
 }
 
-.no-space-pricing .pricing:hover {
-    transition: box-shadow 0.2s ease-in-out;
-}
-
-.no-space-pricing .price-active .pricing-head h4,
-.no-space-pricing .pricing:hover .pricing-head h4 {
-    color: #36d7ac;
+.price-active .pricing-head h4,
+.pricing:hover .pricing-head h4 {
+    color: #0DD;
     padding: 15px 0;
     font-size: 80px;
     transition: color 0.5s ease-in-out;
 }
 
-.yellow-crusta.btn {
+.btn-booking {
     color: #FFFFFF;
     background-color: #e71c1c;
+    padding: 8px 22px;
+    font-size: 18px;
+
 }
 
-.yellow-crusta.btn:hover,
-.yellow-crusta.btn:focus,
-.yellow-crusta.btn:active,
-.yellow-crusta.btn.active {
-    color: #FFFFFF;
-    background-color: #cfa500;
+.btn-booking:hover,
+.btn-booking:focus,
+.btn-booking:active,
+.btn-booking.active {
+    color: #e71c1c;
+    background-color: #FFFFFF;
+    border: 1px solid #e71c1c;
+    transition: all 1s;
 }
 
 /*Booking Section*/
@@ -427,13 +420,10 @@ nav .navbar-nav {
 
 #booking-form {
     background: #000;
-
-
 }
 
 #booking-form h2 {
     color: #fff;
-
 }
 
 #booking form {
@@ -505,23 +495,13 @@ input[type="time"] {
 /*footer */
 
 footer {
-    padding: 15px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
 footer span.copyright {
-    font-size: 90%;
     line-height: 40px;
     text-transform: none;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-footer ul.quicklinks {
-    font-size: 90%;
-    line-height: 40px;
-    margin-bottom: 0;
-    text-transform: none;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 ul.social {
@@ -533,10 +513,16 @@ ul.social li a img {
     height: 35px;
     transition: all 0.5s;
 }
-
+#contact {
+    margin-bottom: 0;
+}
+#contact h2 {
+    margin-top: 5px;
+    font-size: 35px;
+}
 ul.social li img:active,
 ul.social li img:focus,
 ul.social li img:hover {
-    border: 1px solid #fed136;
+    border: 1px solid #A8B1B8;
     border-radius: 50%;
 }

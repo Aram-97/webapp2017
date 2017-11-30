@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 
 <head>
@@ -7,7 +7,7 @@
     <meta name="description" content="The best Taxi service in Hanoi">
     <meta name="author" content="ngay tho">
     <title>Phếch Taxi</title>
-    <link rel="shortcut icon" href="image/icon-taxi'.png">
+    <link rel="shortcut icon" href="image/taxi-ic.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="style.css">
@@ -27,7 +27,7 @@
                 <span class="taxi-brand" href="#">PhechTaxi</span>
             </div>
             <div class="collapse navbar-collapse" id="headNav">
-                <ul class="nav navbar-nav page-ct">
+                <ul class="nav navbar-nav nav-ct">
                     <li><a href="#about-us" class="active">About</a> </li>
                     <li><a href="#service">Service</a> </li>
                     <li><a href="#team">Team</a></li>
@@ -42,34 +42,53 @@
     </nav>
 
     <!--    Slideshow-->
-    <div class="container-fluid">
-        <div class="wrap">
-            <div id="arrow-left" class="arrow"></div>
-            <div id="slider">
-                <div class="slide slide1">
+    <div class="container-fluid" id="slideshow">
+        <div id="slide-wrap" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li class="item1 active"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item slide1 active">
                     <div class="slide-ct">
-                        <span>It is Phech, not Fake</span>
+                        <span>We Are <span class="orange-text">The Best</span> In Town</span>
                     </div>
                 </div>
-                <div class="slide slide2">
+                <div class="item slide2">
                     <div class="slide-ct">
-                        <span>The best taxi drivers from Japanese</span>
+                        <span>Rush Hour</span>
+                        <span class="orange-text">Who do you gonna call?</span> 
+                       <span> PhechTaxi </span>
                     </div>
                 </div>
-                <div class="slide slide3">
+                <div class="item slide3">
                     <div class="slide-ct">
-                        <span>Best customer service for girls and lads</span>
+                        <span><span class="orange-text">Phech</span> stands for <span class="orange-text">Perfect</span>, not <span class="orange-text">Fake</span></span>
                     </div>
                 </div>
             </div>
-            <div id="arrow-right" class="arrow"></div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#slide-wrap" role="button">
+      <img src="image/left-arrow.png" aria-hidden="true"/>
+      <span class="sr-only">Previous</span>
+    </a>
+            <a class="right carousel-control" href="#slide-wrap" role="button">
+      <img src="image/right-arrow.png" aria-hidden="true"/>
+      <span class="sr-only">Next</span>
+    </a>
         </div>
     </div>
     <!--    About Us-->
     <div class="container-fluid" id="about-us">
         <h1 class="text-center">WHO ARE WE?</h1>
         <div class="row">
-            <div class="col-xs-6 col-md-7">
+            <div class="col-xs-6 col-md-7" id="
+               about-img">
                 <img src="image/carr.jpg" alt="cab" class="img-responsive">
             </div>
             <div class="col-xs-6 col-md-5" id="about-info">
@@ -98,12 +117,12 @@
             <div class="col-xs-6 col-md-3 text-center service-ct">
                 <img src="image/savings.png" alt="price">
                 <h2>Best Pricing</h2>
-                <p>Competitive Prices.<br/> Check our <a href="#"> pricing plan</a></p>
+                <p>Competitive Prices.<br/> Check our <a href="#pricing"> pricing plan</a></p>
             </div>
             <div class="col-xs-6 col-md-3 text-center service-ct">
                 <img src="image/heart.png" alt="love">
                 <h2>Nicest Service</h2>
-                <p>Best customer support. <br/> See what people <a href="#">tell about us.</a></p>
+                <p>Best customer support. <br/> See what people <a href="#customer">tell about us.</a></p>
             </div>
         </div>
 
@@ -116,12 +135,12 @@
                 <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#firstModal">
             </div>
             <div class="col-xs-12 col-md-5">
-                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#secondModal">
+                <img src="customer/bolt.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#secondModal">
             </div>
         </div>
         <div class="row nospace">
             <div class="col-xs-12 col-md-3">
-                <img src="customer/quang.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#thirdModal">
+                <img src="customer/pew.jpg" class="img-responsive img-review" data-toggle="modal" data-target="#thirdModal">
             </div>
             <div class="col-xs-12 col-md-5">
                 <img src="customer/musk.jpeg" class="img-responsive img-review" data-toggle="modal" data-target="#fourthModal">
@@ -161,20 +180,20 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Usain Bolt</h4>
+                        <h3 class="modal-title">Usain Bolt</h3>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
-                                <img src="customer/quang.jpg" class="img-responsive">
+                                <img src="customer/bolt1.jpg" class="img-responsive">
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <p>Không thể tin nổi</p>
+                                <p>Thanks to PhechTaxi, now I don't have to run to work.</p>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-booking" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -185,20 +204,21 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Bomb</h4>
+                        <h3 class="modal-title">PewPew</h3>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
-                                <img src="customer/quang.jpg" class="img-responsive">
+                                <video class="img-responsive" controls allowfullsreen>
+                                <source src="customer/votay.MP4" type="video/mp4"></source></video>
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <p>Thật không thể tin nổi !!!</p>
+                                <p>Excellent service. Amazing drivers.<br> Bravo! Bravo! Bravoo! Haha. Clap your hands coi.</p>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-booking" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -209,20 +229,20 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Elon Musk</h4>
+                        <h3 class="modal-title">Elon Musk</h3>
                     </div>
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-xs-12 col-md-6">
-                                <img src="customer/quang.jpg" class="img-responsive">
+                                <img src="customer/musk1.jpg" class="img-responsive">
                             </div>
                             <div class="col-xs-12 col-md-6">
-                                <p>Tin Tin Cái CC</p>
+                                <p>After using their outstanding service over 100 times, I have to admit that Tesla is nothing compare to <strong>PhechTaxi</strong>.</p>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-booking" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -233,7 +253,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Con Ku</h4>
+                        <h4 class="modal-title">Con Ku</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -256,49 +276,56 @@
     <div class="container" id="team">
         <h1 class="text-center">SEE OUR AMAZING TEAM</h1>
         <div class="row">
-            <div class="info-card">
-                <div class="front">
-                    <img class="card-image" src="customer/musk.jpeg">
-                </div>
-                <div class="back">
-                    <h2>Son Goku</h2>
-                    <p>
-                        HIHIHIHHI
-                    </p>
-                </div>
-            </div>
-
-            <div class="info-card">
-                <div class="front">
-                    <img class="card-image" src="customer/musk.jpeg">
-                </div>
-                <div class="back">
-                    <h2>Vegeta</h2>
-                    <p>
-                        HIHIHIHHIH
-                    </p>
+            <div class="col-xs-6 col-md-3">
+                <div class="info-card">
+                    <div class="front">
+                        <img class="card-image" src="customer/flash.jpg">
+                    </div>
+                    <div class="back">
+                        <h2>The Flash</h2>
+                        <p>
+                            Fastest man on Earth <br> Enough Said.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="info-card">
-                <div class="front">
-                    <img class="card-image" src="customer/musk.jpeg">
-                </div>
-                <div class="back">
-                    <h2>Piccolo</h2>
-                    <p>
-                        CHIU CHIU CHIU CHIU CHIU CHIU
-                    </p>
+            <div class="col-xs-6 col-md-3">
+                <div class="info-card">
+                    <div class="front">
+                        <img class="card-image" src="customer/paul.jpg">
+                    </div>
+                    <div class="back">
+                        <h2>Paul Walker</h2>
+                        <p>
+                            I haven't dead yet.<br> I just retired and become a PhechTaxi's driver.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="info-card">
-                <div class="front">
-                    <img class="card-image" src="customer/musk.jpeg">
+            <div class="col-xs-6 col-md-3">
+                <div class="info-card">
+                    <div class="front">
+                        <img class="card-image" src="customer/tokuda.jpg">
+                    </div>
+                    <div class="back">
+                        <h2>Tokuda Tran</h2>
+                        <p>
+                            Provide best service and quality.<br>PhechTaxi's team leader with 50 years experience.
+                        </p>
+                    </div>
                 </div>
-                <div class="back">
-                    <h2>Frieza</h2>
-                    <p>
-                        PANG PANG PANG PANG PANG
-                    </p>
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <div class="info-card">
+                    <div class="front">
+                        <img class="card-image" src="customer/gd.jpg">
+                    </div>
+                    <div class="back">
+                        <h2>G-Long</h2>
+                        <p>
+                            Don't call me Vietnamese GD.<br> Call me a member of PhechTaxi.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,83 +336,66 @@
         <h1 class="text-center">PRICING PLAN</h1>
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                <div class="pricing hover-effect">
+                <div class="pricing">
                     <div class="pricing-head">
-                        <h3>Pro <span>
-					Officia deserunt mollitia </span>
-                        </h3>
-                        <h4><i>$</i>8<i>.69</i>
+                        <h3>Basic </h3>
+                        <h4><i>$</i>5<i>.50</i>
                         </h4>
-                            <span>
-					Per Month </span>
                     </div>
                     <ul class="pricing-content list-unstyled">
-                        <li> At vero eos </li>
-                        <li>No </li>
-                        <li>Hihi</li>
-                        <li>Hihi</li>
+                        <li>Lamborghini Reventon</li>
+                        <li>0.55$ per km for first 10kms</li>
+                        <li>0.8$ for next km.</li>
+                        <li>Eligible for less than 4 passengers.</li>
                     </ul>
                     <div class="pricing-footer">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                            Provide economy class transportation and reliability.
                         </p>
-                        <a href="#" class="btn yellow-crusta">
-					Book Now
-					</a>
+                        <a href="#booking" class="btn btn-booking">Book Now </a>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                <div class="pricing pricing-active hover-effect">
+                <div class="pricing pricing-active">
                     <div class="pricing-head pricing-head-active">
-                        <h3>Expert <span>
-					Officia deserunt mollitia </span>
-                        </h3>
-                        <h4><i>$</i>13<i>.99</i>
-                            <span>
-					Per Month </span>
+                        <h3>Royal</h3>
+                        <h4><i>$</i>17<i>.50</i>
                         </h4>
                     </div>
                     <ul class="pricing-content list-unstyled">
-                        <li>hihi</li>
-                        <li>Hehe</li>
-                        <li>kaka</li>
-                        <li>hoho</li>
+                        <li>Golden Kia Morning</li>
+                        <li>1.75$ per km for first 10kms.</li>
+                        <li>1.8$ for the next km.</li>
+                        <li>Eligible for less than 2 passengers.</li>
+                        <li style="color: #F44336;"><strong>20% discount for third-time customers.</strong></li>
                     </ul>
                     <div class="pricing-footer">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                            Provide first class service to make passenger comfortable and relaxing.
                         </p>
-                        <a href="#" class="btn yellow-crusta">
-					Book Now
-					</a>
+                        <a href="#booking" class="btn btn-booking">Book Now</a>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="pricing hover-effect">
                     <div class="pricing-head">
-                        <h3>Hi-Tech <span>
-					Officia deserunt mollitia </span>
-                        </h3>
-                        <h4><i>$</i>99<i>.00</i>
-                            <span>
-					Per Month </span>
+                        <h3>Express</h3>
+                        <h4><i>$</i>8<i>.00</i>
                         </h4>
                     </div>
                     <ul class="pricing-content list-unstyled">
-                        <li>hehe</li>
-                        <li>kuku</li>
-                        <li>koko</li>
-                        <li>iku</li>
+                        <li>Range Rover</li>
+                        <li>0.8$ per km for first 10kms.</li>
+                        <li>1$ for the next km.</li>
+                        <li>Eligible for less than 8 passengers.</li>
                     </ul>
                     <div class="pricing-footer">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non libero magna psum olor .
+                            Provide enough room space for your travel. Bigger goes with better.
                         </p>
-                        <a href="#" class="btn yellow-crusta">
-					Book Now
-					</a>
+                        <a href="#booking" class="btn btn-booking">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -398,46 +408,56 @@
             <div class="col-xs-12 col-md-6" id="booking-form">
 
                 <h2 class="text-center">Booking Form</h2>
-                <form action="taxiReserDBphp.php">
+                <form action="http://localhost/webapp/taxiReserDBphp.php" method="post">
 
                     <div class="row">
                         <div class="col-xs-3 label">
-                            <p>Your Name: </p>
+                            <p>Name: </p>
                         </div>
                         <div class="col-xs-9">
-                            <input type="text" name="username" value="Your name">
+                            <input type="text" name="customerName" value="Bella" required>
                         </div>
 
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
-                            <p>Your Phone:</p>
+                            <p>Telephone:</p>
                         </div>
-                        <div class="col-xs-9"><input type="tel" name="phone number" value="Your Phone Number"></div>
+                        <div class="col-xs-9">
+                            <input type="tel" name="customerTeleNum" value="+84" required>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
-                            <p>When:</p>
+                            <p>Date:</p>
                         </div>
-                        <div class="col-xs-9"><input type="date" name="date"></div>
+                        <div class="col-xs-9">
+                            <input type="date" name="reserDate" required>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
-                            <p>Hour:</p>
+                            <p>Time:</p>
                         </div>
-                        <div class="col-xs-9"><input type="time" name="time"></div>
+                        <div class="col-xs-9">
+                            <input type="time" name="reserTime" required>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
                             <p>Start Destination:</p>
                         </div>
-                        <div class="col-xs-9"> <input type="text" name="start destination"></div>
+                        <div class="col-xs-9">
+                            <input type="text" name="startPlace" value="Hanoi" required>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
                             <p>End Destination:</p>
                         </div>
-                        <div class="col-xs-9"> <input type="text" name="end destination"></div>
+                        <div class="col-xs-9">
+                            <input type="text" name="endPlace" value="Sam Son" required>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-xs-3 label">
@@ -445,13 +465,13 @@
                         </div>
                         <div class="col-xs-9">
                             <div class="checkbox">
-                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                                <input type="radio" name="vehicleID" value="1" required>Basic
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                                <input type="radio" name="vehicleID" value="2">Royal
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="optradio" value="option1 ">Option 1
+                                <input type="radio" name="vehicleID" value="3">Express
                             </div>
                         </div>
                     </div>
@@ -462,7 +482,7 @@
 
             </div>
             <div class="col-xs-12 col-md-6" id="img-pricing">
-                <img src="customer/girl.png" class="img-responsive" alt="gái">
+                <img src="customer/girl.png" class="img-responsive">
             </div>
         </div>
     </div>
@@ -471,10 +491,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-xs-4">
-                    <p class="copyright">Copyright &copy; PhechTaxi</p>
+                    <p>Copyright &copy; PhechTaxi</p>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                   <p class="text-center">Connected With Us</p>
+                    <p>Connected With Us</p>
                     <ul class="list-inline social">
                         <li class="list-inline-item">
                             <a href="#"><img src="social/insta.png" alt="instagram"> </a>
@@ -487,15 +507,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-xs-4">
-                    <ul class="list-inline quicklinks">
-                        <li class="list-inline-item">
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
+                <div class="col-md-4 col-xs-4" id="contact">
+                    <p>Call Us</p>
+                    <h2>0969696969</h2>            
                 </div>
             </div>
         </div>
