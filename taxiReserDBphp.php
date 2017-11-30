@@ -222,4 +222,79 @@ function showCheckOutReservation($connect){
 	}
 	echo "</table>";
 }
+
+//check taxi driver to put to work
+function checkFreeDriver($connect){
+	$sql = "SELECT * 
+			FROM driver
+			WHERE reservationID IS NULL";
+
+	$result = $connect->query($sql);
+
+	if($result->num_rows > 0){
+		while ($row = $result->fetch_assoc()) {
+			//change how it is displayed here
+			echo "<br>" . "id: " . $row["ID"] 
+			. " - Driver Name: " . $row["name"] 
+			. " - Driver Phone: " . $row["phone"];
+		}
+	}
+}
+//assign a driver to a reservation
+function assignDriver2Reser($connect,$driverID, $reserID){
+	//update driver
+	$sql = "UPDATE driver
+			SET reservationID = '$reserID'
+			WHERE ID = '$driverID'";
+
+	$result = $connect->query($sql);
+
+	if($connect->query($sql) === true){
+		echo "<br/>Update driver's reservation sucessfully";
+	} else {
+		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
+	}
+	//update reservation
+	$sql = "UPDATE reservation
+			SET driverID = '$driverID'
+			WHERE ID = '$reserID'";
+
+	$result = $connect->query($sql);
+
+	if($connect->query($sql) === true){
+		echo "<br/>Update reservation's driver sucessfully";
+	} else {
+		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
+	}
+}
+
+//check in reservation
+function checkInReser($connect,$reserID){
+	$curDateTime = date('Y-m-d H:i:s');
+
+	$sql = "UPDATE reservation
+			SET checkIn = '$curDateTime'
+			WHERE ID = '$reserID'";
+
+	if($connect->query($sql) === true){
+		echo "<br/>Update reservation's check in sucessfully";
+	} else {
+		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
+	}
+}
+//check out reservation
+function checkOutReser($connect,$reserID){
+	$curDateTime = date('Y-m-d H:i:s');
+
+	$sql = "UPDATE reservation
+			SET checkOut = '$curDateTime'
+			WHERE ID = '$reserID'";
+
+	if($connect->query($sql) === true){
+		echo "<br/>Update reservation's check out sucessfully";
+	} else {
+		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
+	}
+}
+
 ?>
