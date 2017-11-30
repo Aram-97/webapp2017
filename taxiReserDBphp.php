@@ -18,19 +18,7 @@ $vehicle = (int)$_POST["vehicleID"];
 
 // Make new Reservation
 echo "<br>Making new Reservation...<br>";
-newReservation($connect, $name, $tele, $time, $start, $end, $vehicle);
-
-echo "<br>All Reservation:<br>";
-showAllReservation($connect);
-
-echo "<br>New Reservation:<br>";
-showNewReservation($connect);
-
-echo "<br>Check In Reservation:<br>";
-showCheckInReservation($connect);
-
-echo "<br>Check Out Reservation:<br>";
-showCheckOutReservation($connect);
+showAllDriver($connect);
 
 ////////Function
 
@@ -221,6 +209,24 @@ function showCheckOutReservation($connect){
 		}
 	}
 	echo "</table>";
+}
+
+//all driver
+function showAllDriver($connect){
+	$sql = "SELECT * 
+			FROM driver";
+
+	$result = $connect->query($sql);
+
+	if($result->num_rows > 0){
+		while ($row = $result->fetch_assoc()) {
+			//change how it is displayed here
+			echo "<br>" . "id: " . $row["ID"] 
+			. " - Driver Name: " . $row["name"] 
+			. " - Driver Phone: " . $row["phone"]
+			. " - Reservation: " . $row["reservationID"];
+		}
+	}
 }
 
 //check taxi driver to put to work
