@@ -295,6 +295,29 @@ function checkOutReser($connect,$reserID){
 	} else {
 		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
 	}
+
+	//find the driver of this reservation to free
+	$sql = "SELECT driverID
+			FROM reservation
+			WHERE ID = '$reserID'";
+
+	$result = $connect->query($sql);
+
+	if($result->num_rows > 0){
+		while ($row = $result->fetch_assoc()) {
+			$freeID = $row["driverID"];
+		}
+	}
+	//free driver
+	$sql = "UPDATE driver
+			SET reservationID = NULL
+			WHERE ID = '$freeID'";
+
+	if($connect->query($sql) === true){
+		echo "<br/>Update driver's check out sucessfully";
+	} else {
+		echo "<br/>Error: " . $sql . "<br>" . $connect->error;
+	}
 }
 
 ?>
